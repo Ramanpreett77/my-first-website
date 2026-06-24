@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       background-color: #2b2b2b;
       color: #ffffff;
       display: flex;
@@ -16,6 +16,8 @@
       align-items: center;
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
+      padding: 2rem 1rem;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -28,10 +30,120 @@
       color: #cccccc;
       margin-top: 0;
     }
+
+    /* ===== Signup form styles ===== */
+    .signup-section {
+      text-align: center;
+      padding: 2rem 1rem;
+      max-width: 500px;
+      margin: 2rem auto 0;
+      width: 100%;
+    }
+
+    .signup-section h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+    }
+
+    .signup-section p {
+      margin-bottom: 1.5rem;
+      color: #cccccc;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .signup-input {
+      flex: 1 1 250px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #555;
+      border-radius: 6px;
+      outline: none;
+      background-color: #3a3a3a;
+      color: #ffffff;
+    }
+
+    .signup-input::placeholder {
+      color: #aaaaaa;
+    }
+
+    .signup-input:focus {
+      border-color: #4a90d9;
+    }
+
+    .signup-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4a90d9;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .signup-button:hover {
+      background-color: #3a78b5;
+    }
+
+    /* ===== Contact button styles ===== */
+    .contact-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.85rem 2rem;
+      background-color: #ffffff;
+      color: #2b2b2b;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #dddddd;
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
   <h1>My Automation Hub</h1>
   <p>This is where my business will run itself.</p>
+
+  <!-- ===== Email signup form (ConvertKit) ===== -->
+  <section class="signup-section">
+    <h2>Stay in the loop</h2>
+    <p>Sign up to get updates straight to your inbox.</p>
+
+    <!--
+      Replace the action URL below with your real ConvertKit form action URL.
+      Find it in ConvertKit: your form > Publish > Embed > Formatted HTML
+    -->
+    <form
+      action="https://app.kit.com/forms/9605708/subscriptions"
+      method="post"
+      target="_blank"
+      class="signup-form"
+    >
+      <input
+        type="email"
+        name="email_address"
+        placeholder="Enter your email address"
+        required
+        class="signup-input"
+      />
+      <button type="submit" class="signup-button">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- ===== Contact Me button ===== -->
+  <!-- Replace the email address with your own -->
+  <a href="mailto:ramanpreettsinghchhabra@gmail.com" class="contact-button">Contact Me</a>
+
 </body>
 </html>
